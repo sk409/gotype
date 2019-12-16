@@ -2,8 +2,9 @@ version: 2
 jobs:
   build:
     docker:
-      - image:circleci/golang:1.13.4
-    working_directory: /go/src/github.com/sk409/gotype
-  steps:
-    - checkout
-    - run: go test -v
+      - image: circleci/golang:1.13.4
+    working_directory: /go/src/github.com/sk409/gofile
+
+    steps:
+      - checkout
+      - run: go test -v
