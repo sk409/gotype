@@ -65,3 +65,7 @@ func IsStruct(i interface{}) bool {
 func IsPointer(i interface{}) bool {
 	return Kind(i) == "ptr"
 }
+
+func IsSlice(i interface{}) bool {
+	return Kind(i) == "slice"
+}

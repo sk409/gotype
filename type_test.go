@@ -235,3 +235,17 @@ func TestIsPointer(t *testing.T) {
 		t.Error("false negative")
 	}
 }
+
+func TestIsSlice(t *testing.T) {
+	var i interface{}
+	i = []string{}
+	isSlice := IsSlice(i)
+	if !isSlice {
+		t.Error("false positive")
+	}
+	i = ""
+	isSlice = IsSlice(i)
+	if isSlice {
+		t.Error("false negative")
+	}
+}
